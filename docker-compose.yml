@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  base-yay:
+    image: base-yay
+    build:
+      context: .
+      dockerfile: ./services/base-yay/Dockerfile
+  useful:
+    image: useful
+    build:
+      context: .
+      dockerfile: ./services/useful/Dockerfile
+      args:
+        - USER_NAME=${USER}
+        - HOST_HOME=${HOME}
+    depends_on:
+      - base-yay
