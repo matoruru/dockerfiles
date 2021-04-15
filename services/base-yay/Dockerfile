@@ -5,6 +5,11 @@ ARG ROOT_PASSWORD="rootpassword"
 
 ENV PATH /usr/local/bin:/usr/bin:/bin
 
+# https://github.com/qutebrowser/qutebrowser/commit/478e4de7bd1f26bebdcdc166d5369b2b5142c3e2#diff-f5ac8dbaf3d87d762d99e75ab1fd15d13779d8c4dbc2c0504ebb64eaaf2783ee
+RUN patched_glibc=glibc-linux4-2.33-4-x86_64.pkg.tar.zst && \
+    curl -LO "https://repo.archlinuxcn.org/x86_64/$patched_glibc" && \
+    bsdtar -C / -xvf "$patched_glibc"
+
 # Download the pacman database files, update the pacman database and install essential pacckages
 RUN pacman -Fy --noconfirm && pacman -Syu --noconfirm vi git openssh
 
