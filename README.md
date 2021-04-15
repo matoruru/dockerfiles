@@ -13,5 +13,5 @@ $ docker-compose build
 Run the image:
 
 ```sh
-$ docker run --rm -it -e TZ=/Asia/Tokyo -v $HOME:$HOME useful
+$ docker run --rm -it -v $HOME:$HOME useful
 ```
