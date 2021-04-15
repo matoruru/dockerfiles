@@ -5,6 +5,8 @@ cd ~/github/matoruru
 git clone https://github.com/matoruru/dotfiles
 cd dotfiles
 
+echo ~/.bash_profile ~/.bashrc | xargs -n1 | xargs -I{} mv {} {}.old
+
 find .* -maxdepth 0 -type f | xargs -I{} ln -sr {} ~/
 
 mkdir ~/.config
