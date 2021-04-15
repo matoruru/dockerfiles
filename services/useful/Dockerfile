@@ -43,6 +43,9 @@ WORKDIR $USER_HOME
 
 RUN mkdir github
 
+# Make symbolic link to .ssh/ in the host
+RUN ~/scripts/ssh-config.sh
+
 # Install dotfiles
 RUN ~/scripts/dotfiles.sh
 
@@ -54,8 +57,5 @@ RUN ~/scripts/vim-plug.sh
 
 # Install language servers
 RUN ~/scripts/languageserver.sh
-
-# Make symbolic link to config files in the host
-RUN ~/scripts/link-config.sh
 
 WORKDIR $HOST_HOME
