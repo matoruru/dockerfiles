@@ -49,6 +49,9 @@ RUN ~/scripts/ssh-config.sh
 # Install dotfiles
 RUN ~/scripts/dotfiles.sh
 
+# Install npm
+RUN ~/scripts/npm.sh
+
 # Install PureScript
 RUN ~/scripts/purescript.sh
 
