@@ -2,7 +2,7 @@
 
 My useful dockerfiles that contains fish, neovim, node and so on...
 
-# Prepare
+## Prepare
 
 1. Set these environment variables that will be needed on build time:
 
