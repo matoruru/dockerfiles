@@ -2,7 +2,7 @@
 
 My useful dockerfiles that contains fish, Neovim, Node.js, PureScript and so on...
 
-## Prepare
+## Preparation
 
 1. Set these environment variables that will be needed on build time:
 
