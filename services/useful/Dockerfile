@@ -58,6 +58,9 @@ RUN ~/scripts/purescript.sh
 # Install vim-plug
 RUN ~/scripts/vim-plug.sh
 
+# Install coc.nvim
+RUN ~/scripts/coc.sh
+
 # Install language servers
 RUN ~/scripts/languageserver.sh
 
