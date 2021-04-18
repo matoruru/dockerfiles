@@ -2,8 +2,8 @@
 
 mkdir -p ~/github/matoruru
 cd ~/github/matoruru
-git clone git@github.com:matoruru/dotfiles
-cd dotfiles
+git clone https://github.com/matoruru/dotfiles
+cd dotfiles || exit 1
 
 echo ~/.bash_profile ~/.bashrc | xargs -n1 | xargs -I{} mv {} {}.old
 
