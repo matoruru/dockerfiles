@@ -14,5 +14,6 @@ services:
       args:
         - USER_NAME=${USER}
         - HOST_HOME=${HOME}
+        - GITHUB_USER_NAME=${GITHUB_USER_NAME}
     depends_on:
       - base-yay

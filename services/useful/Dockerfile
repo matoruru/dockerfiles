@@ -6,8 +6,10 @@ ARG USER_HOME=/docker_home/$USER_NAME
 ARG HOST_HOME
 ENV HOST_HOME=$HOST_HOME
 
+ARG GITHUB_USER_NAME
+
 RUN if [ -z "$USER_NAME" ]; then { echo "\$USER_NAME is required!"; false; }; fi
-RUN if [ -z "$HOST_HOME" ]; then { echo "\$HOST_HOME is required!"; false; }; fi
+RUN if [ -z "$GITHUB_USER_NAME" ]; then { echo "\$GITHUB_USER_NAME is required!"; false; }; fi
 
 # Allow using sudo without password
 RUN sed -e "s/# \(%wheel.*NOPASSWD.*\)/\1/" /etc/sudoers | EDITOR=tee visudo >/dev/null
