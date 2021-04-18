@@ -1,6 +1,6 @@
 # dockerfiles
 
-My useful dockerfiles that contains fish, neovim, node and so on...
+My useful dockerfiles that contains fish, neovim, node, PureScript and so on...
 
 ## Prepare
 
