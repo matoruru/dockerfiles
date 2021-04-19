@@ -48,7 +48,7 @@ alias runud="docker run --rm -itd -v $HOME:$HOME useful"
 # Enter the container with its ID.
 function econ
   set -l container_id $argv[1]
-  if echo $container_id | grep -qE '^ *+$'
+  if echo $container_id | string match -r '^ *+$' >/dev/null
     echo Specify the container ID that you want to enter!
   else
     docker exec -it $container_id bash
@@ -57,12 +57,12 @@ end
 
 # List active docker containers and images.
 function dls
-    set -l green (tput setaf 2)
-    set -l default (tput sgr0)
-    echo $green"[Images]"$default
-    docker image ls
-    echo
-    echo $green"[Running containers]"$default
-    docker container ls
+  set -l green (tput setaf 2)
+  set -l default (tput sgr0)
+  echo $green"[Images]"$default
+  docker image ls
+  echo
+  echo $green"[Running containers]"$default
+  docker container ls
 end
 ```
