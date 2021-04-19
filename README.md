@@ -12,7 +12,7 @@ My useful dockerfiles that contains fish, Neovim, Node.js, PureScript and so on.
 
 1. Customize it as you want.
 
-    I tried to put less but these dockerfiles are still being too much specialized for me. If you want other editor, IDE or other stuff just remove my any things and then replace them with what you like. But I'm sure you still can use `base-yay` image that contains only basic packages.
+    I tried to put less... but these dockerfiles are still being too much specialized for me. If you want other editor, IDE or other stuff just remove my any things and then feel free to replace them with what you like. But I'm sure you still can use `base-yay` image that contains only basic packages.
 
 ## How to use
 
