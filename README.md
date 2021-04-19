@@ -8,7 +8,7 @@ My useful dockerfiles that contains fish, Neovim, Node.js, PureScript and so on.
 
     - USER_NAME (default `$USER`)
     - HOST_HOME (default `$HOME`)
-    - GITHUB_USER_NAME
+    - GITHUB_USER_NAME (this is needed to pull your dotfiles from GitHub)
 
 1. Customize it as you want.
 
